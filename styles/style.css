@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+header{
+    min-height: 10vh;
+}
+
+main{
+    min-height: 79vh;
+}
+
+footer{
+    min-height: 10vh;
+}
+
 #navbarNav{
     flex-grow: 0 !important;
 }
@@ -19,46 +31,6 @@
     text-decoration: none;
     color: white;
     font-size: 1.5em;
-}
-
-@media (min-width: 600px) {
-    label{
-    padding: 10px;
-}
-    span{
-        font-size: 1.5em;
-    }
-}
-
-.card{
-    margin-bottom: 75px;
-    margin-top: 50px;
-}
-
-.card-title, .card-text{
-    text-align: center;
-}
-
-.form{
-    text-align: center;
-    margin-top: 8px;
-
-}
-
-.submit{
-    color: white;
-    border-radius: 5px;
-    border-color: white;
-    text-align: center;
-    font-size: 1em;
-    box-shadow: 3px grey;
-    padding: 5px;
-    margin: 8px;
-}
-
-.submit:hover{
-    background-color: antiquewhite;
-    color: grey;
 }
 
 th{

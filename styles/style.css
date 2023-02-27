@@ -36,3 +36,10 @@ footer{
 th{
     color: grey;
 }
+
+
+@media (max-width: 1024px){
+    .row, h1{
+        font-size: 12px;
+    }
+}

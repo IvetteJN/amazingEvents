@@ -1,16 +1,15 @@
-function pastEvents(arrayEvents,currentDate){
+function upcomingEvents(arrayEvents,currentDate){
     let cards=''
     for(const event of arrayEvents){
       if(event.date > currentDate){
-        cards += showPastEvents(event);
+        cards += showUpcomingEvents(event);
       }
     }
     return cards
   }
   
-  function showPastEvents(event){
-      return `<div class="p-2 col-lg-4 col-sm-11 text-center">
-    <div class="card" style="width:15rem;">
+  function showUpcomingEvents(event){
+      return `<div class="card text-center" style="width:18rem;">
       <img src=${event.image} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${event.name}</h5>
@@ -22,13 +21,12 @@ function pastEvents(arrayEvents,currentDate){
         <div>Price $ ${event.price}</div>
         <a href="#" class="btn btn-outline-light">+ INFO</a>
       </div>
-    </div>
     </div>`
   }
   
-  const cardPastEvents = document.querySelector("#upcomingEvents")
+  const cardUpcomingEvents = document.querySelector("#upcomingEvents")
   
-  let card = pastEvents(data.events, data.currentDate)
+  let card = upcomingEvents(data.events, data.currentDate)
   
-  cardPastEvents.innerHTML = card
+  cardUpcomingEvents.innerHTML = card
   

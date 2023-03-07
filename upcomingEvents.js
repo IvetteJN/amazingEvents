@@ -10,7 +10,7 @@ function upcomingEvents(arrayEvents,currentDate){
   
   function showUpcomingEvents(event){
       return `<div class="card text-center" style="width:18rem;">
-      <img src=${event.image} class="card-img-top" alt="...">
+      <div class="container p-2"><img src=${event.image} class="card-img-top" alt="..."></div>
       <div class="card-body">
         <h5 class="card-title">${event.name}</h5>
         <p>${event.date}</p>

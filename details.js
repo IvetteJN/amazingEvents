@@ -1,24 +1,25 @@
-let params = new URLSearchParams(document.location.search)
-let id = params.get("id")
+const params = new URLSearchParams(document.location.search)
+const id = params.get("id")
 
-let events = data.events
-let event = events.filter.toString(events._id == id)
+const eventos = data.events
+const evento = eventos.find((evento) => evento.id == id)
+
 
 const container = document.getElementById("detailContainer")
 
 let detailCard = ''
 
-detailCard += `
+  detailCard += `
     <div class="card text-center" style="width:18rem;">
-    <img src="${events[0].image}" class="card-img-top" alt="...">
+    <img src="${evento.image}" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">${events[0].name}</h5>
-      <p>${events[0].date}</p>
-      <p>${events[0].category}</p>
-      <p>${events[0].capacity}</p>
-      <p>${events[0].place}</p>
-      <p class="card-text">${events[0].description}</p>
-      <div>Price $ ${events[0].price}</div>
+      <h5 class="card-title">${evento.name}</h5>
+      <p>${evento.date}</p>
+      <p>${evento.category}</p>
+      <p>${evento.capacity}</p>
+      <p>${evento.place}</p>
+      <p class="card-text">${evento.description}</p>
+      <div>Price $ ${evento.price}</div>
     </div>
   </div>`
 

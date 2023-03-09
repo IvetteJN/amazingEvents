@@ -2,7 +2,11 @@ const cardContainer = document.querySelector('#cardContainer')
 let arrayEvents = data.events
 let cards = ''
 
-arrayEvents.forEach(event => {
+let search = document.getElementById("search")
+
+function getEvents(arrayEvents){
+  cardContainer.innerHTML = ''
+  arrayEvents.forEach((event) => {
   
     cards += `<div class="card text-center" style="width:18rem;">
       <div class="container p-2"><img src=${event.image} class="card-img-top" alt="..."></div>
@@ -13,5 +17,16 @@ arrayEvents.forEach(event => {
         <a href="./details.html?id=${event.id}" class="btn btn-outline-light">+ INFO</a>
       </div>
     </div>`
-})
+
 cardContainer.innerHTML = cards
+})
+}
+
+getEvents(arrayEvents)
+
+search.addEventListener('change',()=>{
+    let filteredEvents = arrayEvents.filter((event)=> event.toLowerCase().includes(search.value.toLowerCase()))
+
+    getEvents(filteredEvents)
+
+})

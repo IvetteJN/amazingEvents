@@ -15,7 +15,7 @@ function upcomingEvents(arrayEvents,currentDate){
         <h5 class="card-title">${event.name}</h5>
         <p class="card-text">${event.description}</p>
         <div>Price $ ${event.price}</div>
-        <a href="./details.html?id=${event.id}" class="btn btn-outline-light">+ INFO</a>
+        <a href="./details.html?id=${event.id}" class="btn btn-outline-dark mt-2">+ INFO</a>
       </div>
     </div>`
   }

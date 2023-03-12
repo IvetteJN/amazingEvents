@@ -67,22 +67,22 @@
             aria-label="Toggle navigation">
             <span>&#8981;</span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <fieldset class="navbar-nav me-auto mb-2 mb-lg-0">
-              <label class="p-2">Category<input type="checkbox" name="category" value="category"></label>
-              <label class="p-2">Category<input type="checkbox" name="category" value="category"></label>
-              <label class="p-2">Category<input type="checkbox" name="category" value="category"></label>
-              <label class="p-2">Category<input type="checkbox" name="category" value="category"></label>
-              <label class="p-2">Category<input type="checkbox" name="category" value="category"></label>
-            </fieldset>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">&#8981;</button>
-            </form>
+
+          <div id="category" class="col-md-8 d-flex py-3 justify-content-start align-items-center gap-3 flex-wrap">
+          </div>
+
+          <div class="d-flex">
+            <label for="">
+              <input id="search" type="text" class="form-control search" placeholder="Search"
+                aria-describedby="button-addon2" autofocus />
+            </label>
           </div>
         </div>
-      </nav>
+
     </div>
+    </nav>
+    </div>
+
     <!--dynamic CARDS-->
     <div class="container d-flex flex-wrap gap-2 justify-content-center p-2" id="upcomingEvents"></div>
 

@@ -17,7 +17,7 @@ h1, h3{
 
 main{
     background-color: rgb(225, 45, 138);
-    min-height: 79vh;
+    min-height: 80vh;
 }
 
 footer{
@@ -29,8 +29,16 @@ footer{
     flex-grow: 0 !important;
 }
 
-.nav-link{
-    box-shadow: rgb(237, 4, 124);
+.navbar a{
+    background-color: rgb(225, 45, 138);
+    border-radius: 5px;
+    padding: 3px 7px 3px 7px;
+    margin: 0px 5px 0px 5px;
+}
+
+.navbar a:hover{
+    background-color:rgb(223, 251, 8);
+    color: black;
 }
 
 .container{
@@ -47,9 +55,9 @@ th{
     color: grey;
 }
 
-
 @media (max-width: 1024px){
     .row, h1{
         font-size: 12px;
     }
 }
+

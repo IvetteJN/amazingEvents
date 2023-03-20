@@ -1,6 +1,5 @@
 *{
-    background-color: rgb(248, 114, 248);
-    color: white;
+    color: black;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -8,19 +7,38 @@
 }
 
 header{
-    min-height: 10vh;
+    background-color: rgb(230, 69, 152);
+    min-height: 5vh;
+}
+
+h1, h3{
+    color: white;
 }
 
 main{
-    min-height: 79vh;
+    background-color: rgb(225, 45, 138);
+    min-height: 80vh;
 }
 
 footer{
     min-height: 10vh;
+    background-color: rgb(230, 69, 152);
 }
 
 #navbarNav{
     flex-grow: 0 !important;
+}
+
+.navbar a{
+    background-color: rgb(225, 45, 138);
+    border-radius: 5px;
+    padding: 3px 7px 3px 7px;
+    margin: 0px 5px 0px 5px;
+}
+
+.navbar a:hover{
+    background-color:rgb(223, 251, 8);
+    color: black;
 }
 
 .container{
@@ -37,9 +55,9 @@ th{
     color: grey;
 }
 
-
 @media (max-width: 1024px){
     .row, h1{
         font-size: 12px;
     }
 }
+

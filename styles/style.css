@@ -53,6 +53,11 @@ footer{
 
 th{
     color: grey;
+    text-align: center;
+}
+
+td{
+    color: white;
 }
 
 @media (max-width: 1024px){

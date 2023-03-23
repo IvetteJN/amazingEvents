@@ -38,6 +38,10 @@ function createCheckbox(cat, i) {
 
 function filterCheckbox(events, checkbox) {
   let filteredEvents = []
+  if(checkbox.length == 0){
+    cardContainer.innerHTML = `<h4 class="display-1">There are no matches for your search</h4>`
+    return
+}
   if (checkbox.length > 0) {
     checkbox.forEach((category) => {
       events.forEach((event) => {

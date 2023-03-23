@@ -1,7 +1,7 @@
 const params = new URLSearchParams(document.location.search)
 const id = params.get("id")
 
-const moreInfo = data.events
+const moreInfo = url.events
 const info = moreInfo.find((info) => info.id == id)
 
 

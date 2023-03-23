@@ -1,8 +1,7 @@
 fetch('../assets/amazing_1.json').then(response => response.json())
   .then(data => {
     arrayPast = pastEvents(data.events, data.currentDate)
-    arrayUpcoming= upcomingEvents(data.events, data.currentDate)
-    console.log(arrayPast)
+    arrayUpcoming = upcomingEvents(data.events, data.currentDate)
     printTable(results(assistance(arrayPast), assistance(arrayPast).reverse(), capacity(arrayPast)), "firstTable")
     printSecondTable(dataTable(arrayUpcoming), "upcomingEvents")
     printSecondTable(dataTable(arrayPast), "pastEvents")
@@ -25,7 +24,6 @@ function assistance(arrPast) {
     }
   })
   arrayPercentage.sort((a, b) => b.attendance - a.attendance)
-  console.log(arrayPercentage)
   return arrayPercentage
 
 }
@@ -38,7 +36,6 @@ function capacity(arrPast) {
     }
   })
   arrayCapacity.sort((a, b) => b.capacity - a.capacity)
-  console.log(arrayCapacity)
   return arrayCapacity
 
 }
@@ -63,20 +60,17 @@ function printTable(results, container) {
   `
 }
 
-
-
 function dataTable(arr) {
-  let categories = Array.from(new Set(arr.map(a => a.category)));
+  let categories = Array.from(new Set(arr.map(a => a.category)))
   let eventCategories = categories.map(cat => arr.filter(event => event.category == cat))
   let result = eventCategories.map(eventCat => {
     let calculate = eventCat.reduce((acc, event) => {
-      console.log(event)
       acc.category = event.category;
-      acc.revenues += event.price * (event.assistance || event.estimate);
+      acc.revenues += event.price * (event.assistance || event.estimate)
       acc.attendance += ((event.assistance || event.estimate) * 100) / event.capacity
       return acc
     }, {
-      category: "",
+      category: '',
       revenues: 0,
       attendance: 0
     })
@@ -97,5 +91,5 @@ function printSecondTable(arr, idTag) {
           </tr>
       `
   })
-  upcomingTable.innerHTML = html.join("")
+  upcomingTable.innerHTML = html.join('')
 }

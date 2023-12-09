@@ -1,0 +1,58 @@
+*{
+    color: rgb(238, 151, 196);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(238, 151, 196);
+    min-height: 5vh;
+}
+
+
+main{
+    background-color: white;
+    min-height: 80vh;
+}
+
+footer{
+    min-height: 10vh;
+    background-color: rgb(238, 151, 196);
+}
+
+.container-fluid h6{
+    color: white;
+}
+
+#navbarNav{
+    flex-grow: 0 !important;
+}
+
+.navbar a{
+    border-radius: 5px;
+    padding: 3px 7px 3px 7px;
+    margin: 0px 5px 0px 5px;
+}
+
+.navbar a:hover{
+    background-color:white;
+    color: black;
+}
+
+.container{
+    text-align: center;
+}
+
+.secondNavBar{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+@media (max-width: 1024px){
+    .row, h1{
+        font-size: 12px;
+    }
+}

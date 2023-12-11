@@ -45,12 +45,6 @@ footer{
     text-align: center;
 }
 
-.secondNavBar{
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-
 @media (max-width: 1024px){
     .row, h1{
         font-size: 12px;
